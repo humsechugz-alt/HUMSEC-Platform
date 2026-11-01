@@ -8,7 +8,7 @@ from psycopg.rows import dict_row
 load_dotenv()
 
 
-DATABASE_URL = os.getenv("HUGZNETS_DATABASE_URL")
+DATABASE_URL = (os.getenv("HUGZNETS_DATABASE_URL") or "").strip()
 
 
 if not DATABASE_URL:
